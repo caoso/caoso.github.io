@@ -1,49 +1,292 @@
-﻿<!DOCTYPE HTML>
-<!--
-	Aerial by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
-	<head>
-		<title>Mist Game</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-	</head>
-	<body class="is-preload">
-		<div id="wrapper">
-			<div id="bg"></div>
-			<div id="overlay"></div>
-			<div id="main">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rollic Games - Fun Hyper-Casual Games</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #f8f8f8;
+            color: #333;
+        }
+        
+        header {
+            background-color: white;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            padding: 15px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            height: 40px;
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+        
+        nav ul li {
+            margin-left: 30px;
+        }
+        
+        nav ul li a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            font-size: 16px;
+        }
+        
+        .hero {
+            text-align: center;
+            padding: 60px 0;
+            background: linear-gradient(135deg, #6e8efb, #a777e3);
+            color: white;
+        }
+        
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+        
+        .hero p {
+            font-size: 20px;
+            max-width: 700px;
+            margin: 0 auto 30px;
+        }
+        
+        .games-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 30px;
+            padding: 50px 0;
+        }
+        
+        .game-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+        
+        .game-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .game-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        
+        .game-info {
+            padding: 20px;
+        }
+        
+        .game-info h3 {
+            margin-bottom: 10px;
+            font-size: 18px;
+        }
+        
+        .game-info p {
+            color: #666;
+            font-size: 14px;
+            margin-bottom: 15px;
+        }
+        
+        .download-btn {
+            display: inline-block;
+            background-color: #6e8efb;
+            color: white;
+            padding: 8px 15px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 14px;
+        }
+        
+        footer {
+            background-color: #222;
+            color: white;
+            padding: 40px 0;
+            text-align: center;
+        }
+        
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+        
+        .footer-links a {
+            color: #aaa;
+            margin: 0 15px;
+            text-decoration: none;
+        }
+        
+        .copyright {
+            color: #777;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
 
-				<!-- Header -->
-                <header id="header">
-                    <h1>薄雾游戏</h1>
-                    <p>ZengHua</p>
-                    <nav>
-                        <ul>
-                            <li><a href="https://apps.apple.com/cn/developer/id1521638173" class="icon brands fa-apple"><span class="label">Apple</span></a></li>
-                            <li><a href="https://www.taptap.com/developer/78586" class="icon brands fa-android"><span class="label">TapTap</span></a></li>
-                            <!-- <li><a href="https://m.weibo.cn/u/6471997497" class="icon brands fa-weibo"><span class="label">Weibo</span></a></li> -->
-                            <li><a href="https://jq.qq.com/?_wv=1027&k=rkcmNiCe" class="icon brands fa-qq"><span class="label">QQ</span></a></li>
-                            <li><a href="mailto:mistgamestudio@163.com" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
-                        </ul>
-                    </nav>
-                </header>
+    
+    <section class="hero">
+        <div class="container">
+            <h1>Hyper-Casual Games for Everyone</h1>
+            <p>Discover our collection of fun, addictive mobile games that you can play anytime, anywhere.</p>
+        </div>
+    </section>
+    
+    <main class="container">
+        <div class="games-grid">
+            <!-- Game Card 1 -->
+            <div class="game-card">
+                <img src="https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/22/e9/0e/22e90e21-7316-78f6-6189-600e7a378c9e/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/230x0w.webp" alt="Tangle Master 3D" class="game-image">
+                <div class="game-info">
+                    <h3>Tangle Master 3D</h3>
+                    <p>Untangle the ropes in this fun puzzle game!</p>
+                    <a href="#" class="download-btn">Download</a>
+                </div>
+            </div>
+            
+            <!-- Game Card 2 -->
+			<div class="game-card">
+                <img src="https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/e5/5a/01/e55a0135-a142-9721-db23-662371c5fc20/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/230x0w.webp" alt="Toilet Race" class="game-image">
+                <div class="game-info">
+                    <h3>Toilet Race</h3>
+                    <p>Race to the toilet in this funny game!</p>
+                    <a href="#" class="download-btn">Download</a>
+                </div>
+            </div>
+            
+            <!-- Game Card 3 -->
+            <div class="game-card">
+                <img src="https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/82/93/24/82932485-2d5b-7bb5-a993-405cdba59615/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/230x0w.webp" alt="Push'em All" class="game-image">
+                <div class="game-info">
+                    <h3>Push'em All</h3>
+                    <p>Push objects and clear the platform!</p>
+                    <a href="#" class="download-btn">Download</a>
+                </div>
+            </div>
+            
+            <!-- Game Card 4 -->
+            <div class="game-card">
+                <img src="https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/7f/78/9e/7f789efd-6bd0-e80e-1464-5e09e03de262/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/230x0w.webp" alt="Toilet Race" class="game-image">
+                <div class="game-info">
+                    <h3>Toilet Race</h3>
+                    <p>Race to the toilet in this funny game!</p>
+                    <a href="#" class="download-btn">Download</a>
+                </div>
+            </div>
+            
+            <!-- Game Card 5 -->
+            <div class="game-card">
+                <img src="https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/2b/eb/f7/2bebf708-5e57-9683-6b99-1431bd034d7d/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/230x0w.webp" alt="Jelly Shift" class="game-image">
+                <div class="game-info">
+                    <h3>Jelly Shift</h3>
+                    <p>Move the jelly and solve the puzzles!</p>
+                    <a href="#" class="download-btn">Download</a>
+                </div>
+            </div>
+            
+            <!-- Game Card 6 -->
+            <div class="game-card">
+                <img src="https://is1-ssl.mzstatic.com/image/thumb/Purple114/v4/59/f7/fd/59f7fd89-8b1d-3ea6-e902-dc938aec27b5/AppIcon-1x_U007emarketing-0-7-0-85-220.png/230x0w.webp" alt="Toilet Race" class="game-image">
+                <div class="game-info">
+                    <h3>Toilet Race</h3>
+                    <p>Race to the toilet in this funny game!</p>
+                    <a href="#" class="download-btn">Download</a>
+                </div>
+            </div>
+			
+			<!-- Game Card 7 -->
+            <div class="game-card">
+                <img src="https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/19/08/a0/1908a013-13bf-2449-a92e-9e03ba950afd/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/230x0w.webp" alt="Toilet Race" class="game-image">
+                <div class="game-info">
+                    <h3>Toilet Race</h3>
+                    <p>Race to the toilet in this funny game!</p>
+                    <a href="#" class="download-btn">Download</a>
+                </div>
+            </div>
+			
+			<!-- Game Card 8 -->
+			<div class="game-card">
+                <img src="https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/7b/f5/2d/7bf52db9-81d3-2c70-80c2-7255d8768b8e/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/230x0w.webp" alt="Wood Tower" class="game-image">
+                <div class="game-info">
+                    <h3>Wood Tower</h3>
+                    <p>Build the tallest tower and don't let it fall!</p>
+                    <a href="#" class="download-btn">Download</a>
+                </div>
+            </div>
+			
+			<!-- Game Card 9 -->
+            <div class="game-card">
+                <img src="https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/dc/5a/0c/dc5a0c8c-d76f-bae4-5993-9a693a40b4d8/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/230x0w.webp" alt="Hair Challenge" class="game-image">
+                <div class="game-info">
+                    <h3>Hair Challenge</h3>
+                    <p>Grow your hair and beat the competition!</p>
+                    <a href="#" class="download-btn">Download</a>
+                </div>
+            </div>
+			
+			<!-- Game Card 10 -->
+            <div class="game-card">
+                <img src="https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/27/48/a2/2748a2aa-2666-866e-a36b-8c63767e48f4/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/230x0w.webp" alt="Toilet Race" class="game-image">
+                <div class="game-info">
+                    <h3>Toilet Race</h3>
+                    <p>Race to the toilet in this funny game!</p>
+                    <a href="#" class="download-btn">Download</a>
+                </div>
+            </div>
+			
+			<!-- Game Card 11 -->
+            <div class="game-card">
+                <img src="https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/5e/1e/a0/5e1ea02e-dd22-46a2-ff91-328b4747ca1c/AppIcon-0-0-1x_U007emarketing-0-6-0-85-220.png/230x0w.webp" alt="Toilet Race" class="game-image">
+                <div class="game-info">
+                    <h3>Toilet Race</h3>
+                    <p>Race to the toilet in this funny game!</p>
+                    <a href="#" class="download-btn">Download</a>
+                </div>
+            </div>
+			
+			<!-- Game Card 12 -->
+            <div class="game-card">
+                <img src="https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/9d/2c/e4/9d2ce42b-98b7-c902-af69-a3d709a1dce7/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/230x0w.webp" alt="Toilet Race" class="game-image">
+                <div class="game-info">
+                    <h3>Toilet Race</h3>
+                    <p>Race to the toilet in this funny game!</p>
+                    <a href="#" class="download-btn">Download</a>
+                </div>
+            </div>
+			
+        </div>
+    </main>
+    
 
-				<!-- Footer -->
-					<footer id="footer">
-						<span class="copyright">&copy; 联系我们 : mistgamestudio@163.com</span>
-					</footer>
-
-			</div>
-		</div>
-		<script>
-			window.onload = function() { document.body.classList.remove('is-preload'); }
-			window.ontouchmove = function() { return false; }
-			window.onorientationchange = function() { document.body.scrollTop = 0; }
-		</script>
-	</body>
+</body>
 </html>
